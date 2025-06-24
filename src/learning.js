@@ -26,6 +26,8 @@ const clearBtn = document.getElementById("clearBtn")
 
 const calculateBtn = document.getElementById("calculateBtn")
 
+const deleteBtn = document.getElementById("deleteBtn");
+
 function appendToDisplay(input){
     console.log("hello")
     display.value += input;
@@ -36,6 +38,11 @@ clearBtn.addEventListener("click", clearDisplay);
 
 function clearDisplay(){
     display.value = "";
+}
+deleteBtn.addEventListener("click", deleteDisplay);
+
+function deleteDisplay(){
+    display.value = display.value.slice(0, -1);
 }
 
 calculateBtn.addEventListener("click", calculateResult);
